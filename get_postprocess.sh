@@ -19,7 +19,7 @@ RESULT_FILE="positions.txt"
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 usage() {
-    printf "Usage: $0 -s <station> -u <username> -p <password> --rtkbase-user <rtkbase username> --rtkbase-pass <rtkbase password> --rtkbase-hostname <rtkbase hostname>\n\nRequired:\n\tusername\t\tUsername for Swepos\n\tpassword\t\tPassword for Swepos\nOptional:\n\tstation\t\t\tSwepos station to use as reference [0SIB]\n\trtkbase username\tUsername for RTKBase server [basegnss]\n\trtkbase password\tPassword for RTKBase server [basegnss!]\n\trtkbase hostname\tHostname for RTKBase server [basegnss.local]\n"
+    printf "Usage: $0 -s <station> -u <username> -p <password> --rtkbase-user <rtkbase username> --rtkbase-pass <rtkbase password> --rtkbase-hostname <rtkbase hostname>\n\nRequired:\n\tusername\t\tUsername for Swepos\n\tpassword\t\tPassword for Swepos\nOptional:\n\tstation\t\t\tSwepos station to use as reference [$STATION]\n\trtkbase username\tUsername for RTKBase server [$RTKBASE_USERNAME]\n\trtkbase password\tPassword for RTKBase server [$RTKBASE_PASSWORD]\n\trtkbase hostname\tHostname for RTKBase server [$RTKBASE_HOSTNAME]\n"
 }
 
 while [[ $# -gt 0 ]]; do
